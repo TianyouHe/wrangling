@@ -1,0 +1,36 @@
+---
+title: "wrangling"
+output: github_document
+date: "2023-09-19"
+---
+```{r}
+library(tidyverse)
+```
+
+lets's import the `Fas litters.csv` csv.
+
+```{r}
+litters_df = 
+  read_csv("~/Desktop/wrangling/data/FAS_litters.csv")
+
+litters_df =
+  janitor::clean_names(litters_df)
+```
+
+Import the same dataset using an absolute path
+
+
+```{r}
+litters_df = 
+  read_csv("~/Desktop/wrangling/data/FAS_pups.csv")
+
+litters_df =
+  janitor::clean_names(litters_df)
+```
+
+
+```{r}
+
+```
+
+
