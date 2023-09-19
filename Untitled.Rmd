@@ -93,3 +93,23 @@ pulse_df =
   read_sas("~/Desktop/wrangling/data/public_pulse_data.sas7bdat")
 ```
 
+
+## Base R ... (这玩意不用，就了解一下)
+
+```{r,eval = FALSE}
+litters_df=
+  read_csv("~/Desktop/wrangling/data/FAS_litters.csv")
+
+litters_df$Group
+```
+
+## Export data
+We have code that "cleans" data
+
+```{r}
+litters_df_cleaned=
+  read_csv("~/Desktop/wrangling/data/FAS_litters.csv")
+litters_df_cleaned=
+  janitor::clean_names(litters_df_cleaned)
+```
+
