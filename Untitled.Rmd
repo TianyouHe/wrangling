@@ -21,16 +21,28 @@ Import the same dataset using an absolute path
 
 
 ```{r}
-litters_df = 
-  read_csv("~/Desktop/wrangling/data/FAS_pups.csv")
+pups_df = read_csv("~/Desktop/wrangling/data/FAS_pups.csv")
 
-litters_df =
-  janitor::clean_names(litters_df)
+pups_df = janitor::clean_names(pups_df)
 ```
 
-
+#look at data
 ```{r}
+litters_df
 
+head(litters_df)
+
+tail(litters_df)
+```
+You can use `view`
+```{r, eval = FALSE}
+view(litters_df)
 ```
 
+look at a data summary
+```{r}
+str(litters_df)
+
+skimr::skim(litters_df)
+```
 
