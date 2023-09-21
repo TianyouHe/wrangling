@@ -13,8 +13,20 @@ Import FAS litters and pubs
 litters_df = read.csv("~/Desktop/desktop/Columbia 2023 Fall/Data Science/wrangling/data/FAS_litters.csv")
 litters_df = janitor:: clean_names(litters_df)
 
-litters_df = read.csv("~/Desktop/desktop/Columbia 2023 Fall/Data Science/wrangling/data/FAS_pups.csv")
-litters_df = janitor:: clean_names(litters_df)
+pups_df = read.csv("~/Desktop/desktop/Columbia 2023 Fall/Data Science/wrangling/data/FAS_pups.csv")
+pups_df = janitor:: clean_names(pups_df)
 
+```
+
+`select` is used to select columns
+
+```{r}
+select(litters_df, group, litter_number, gd0_weight)
+
+select(litters_df, group, gd0_weight)
+
+select(litters_df, group, gd0_weight:gd_of_birth)
+
+select(litters_df, group, starts_with("pups"))
 ```
 
