@@ -28,5 +28,37 @@ select(litters_df, group, gd0_weight)
 select(litters_df, group, gd0_weight:gd_of_birth)
 
 select(litters_df, group, starts_with("pups"))
+
+select(litters_df, -litter_number)
+
+select(litters_df, -starts_with("gd"))
+
+select(litters_df, group, litter_id = litter_number)
+
+select(litters_df, group, litter_id = litter_number, everything()) #这个everything function就是保留所有其他列
+
+select(litters_df, gd0_weight, everything())
+
+
+```
+
+`select` vs `oull`
+
+
+```{r}
+select(litters_df, group) #S elect returns one or more columns as a data
+pull(litters_df, group) # Pull returns a single column as a vector; 
+```
+
+```{r}
+rename(litters_df, litter_id = litter_number)
+
+relocate(litters_df, litter_number)
+```
+
+
+
+```{r}
+select(pups_df, litter_number, sex, pd_ears)
 ```
 
