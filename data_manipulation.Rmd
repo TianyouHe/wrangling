@@ -1,0 +1,20 @@
+---
+title: "Data Manipulation"
+output: giithub_document
+---
+
+```{r}
+library(tidyverse)
+```
+
+Import FAS litters and pubs
+
+```{r}
+litters_df = read.csv("~/Desktop/desktop/Columbia 2023 Fall/Data Science/wrangling/data/FAS_litters.csv")
+litters_df = janitor:: clean_names(litters_df)
+
+litters_df = read.csv("~/Desktop/desktop/Columbia 2023 Fall/Data Science/wrangling/data/FAS_pups.csv")
+litters_df = janitor:: clean_names(litters_df)
+
+```
+
