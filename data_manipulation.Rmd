@@ -117,7 +117,22 @@ arrange(litters_df,group, gd0_weight)
 
 
 
+## pipes
 
+```{r}
+litters_df = 
+  read_csv("~/Desktop/desktop/Columbia 2023 Fall/Data Science/wrangling/data/FAS_litters.csv") |>
+  janitor::clean_names()|>
+  select(-starts_with("pups"))|>
+  mutate(
+    grou = str_to_lower(group),
+    wt_gain = gd18_weight - gd0_weight,
+  )|>
+  drop_na(wt_gain)|>
+  arrange(group,wt_gain)
+```
+
+`这个|>就是then的意思`
 
 
 
